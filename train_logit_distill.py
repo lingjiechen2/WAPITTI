@@ -441,7 +441,6 @@ class WatermarkLogitsDistillTrainer(Trainer):
                     device_id=self.args.device,
                   )
         return model
-    
 
 def main():
     # See all possible arguments in src/transformers/training_args.py

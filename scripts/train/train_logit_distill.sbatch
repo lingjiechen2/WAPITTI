@@ -4,7 +4,7 @@
 #SBATCH --quotatype=spot
 #SBATCH --requeue
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:8
+#SBATCH --gres=gpu:0
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12
 #SBATCH --mem-per-cpu=8G
@@ -14,79 +14,37 @@
 #SBATCH -e logs/%x-%j.err
 
 set -euo pipefail
+source scripts/watermark_vector/utils.sh
 
 # --- Positional args (sbatch passes them through) ---
 # Usage: sbatch train_logit_distill.sbatch <watermark> <out_dir> <port> [llama_model]
 watermark=${1:?Usage: sbatch train_logit_distill.sbatch <watermark> <out_dir> <port> [llama_model]}
-out_dir=${2:?Usage: sbatch train_logit_distill.sbatch <watermark> <out_dir> <port> [llama_model]}
-port=${3:?Usage: sbatch train_logit_distill.sbatch <watermark> <out_dir> <port> [llama_model]}
-llama=${4:-"meta-llama/Llama-3.2-3B-Instruct"}
+out_dir="/mnt/lustrenew/mllm_safety-shared/tmp/fanyuyu/models/watermark/"
+port=$((20000 + RANDOM % 20000))
+model="meta-llama/Llama-2-7b-hf"
 model_path="/mnt/lustrenew/mllm_safety-shared/models/huggingface"
 dataset_path="/mnt/lustrenew/mllm_safety-shared/datasets/huggingface"
+
+if [[ "${model%%/*}" == "meta-llama" ]]; then
+    FSDP_LAYER="LlamaDecoderLayer"
+elif [[ "${model%%/*}" == "Qwen" ]]; then
+    FSDP_LAYER="Qwen2DecoderLayer"
+fi
+
+echo $FSDP_LAYER
 
 # --- Paths / env (adjust PROJECT_ROOT if needed) ---
 PROJECT_ROOT=${PROJECT_ROOT:-$(pwd)}
 mkdir -p "$PROJECT_ROOT/logs" "$PROJECT_ROOT/data"
 cd "$PROJECT_ROOT"
 
-# # Make sure Python can import your local package
-# export PYTHONPATH="$PROJECT_ROOT:$PYTHONPATH"
-
-model_name="${llama}-logit-watermark-distill-${watermark}"
+model_name="${model}-logit-watermark-distill-${watermark}"
 echo "${out_dir}${model_name}"
 
 # --- Watermark arg switch ---
-if [ "$watermark" = "aar-k2" ]; then
-    watermark_args="--watermark_type aar --aar_watermark_k 2"
-elif [ "$watermark" = "aar-k3" ]; then
-    watermark_args="--watermark_type aar --aar_watermark_k 3"
-elif [ "$watermark" = "aar-k4" ]; then
-    watermark_args="--watermark_type aar --aar_watermark_k 4"
-elif [ "$watermark" = "kgw-k0-gamma0.25-delta1" ]; then
-    watermark_args="--watermark_type kgw \
-    --kgw_watermark_gamma 0.25 \
-    --kgw_watermark_delta 1.0 \
-    --kgw_watermark_seeding_scheme simple_0"
-elif [ "$watermark" = "kgw-k0-gamma0.25-delta2" ]; then
-    watermark_args="--watermark_type kgw \
-    --kgw_watermark_gamma 0.25 \
-    --kgw_watermark_delta 2.0 \
-    --kgw_watermark_seeding_scheme simple_0"
-elif [ "$watermark" = "kgw-k1-gamma0.25-delta1" ]; then
-    watermark_args="--watermark_type kgw \
-    --kgw_watermark_gamma 0.25 \
-    --kgw_watermark_delta 1.0 \
-    --kgw_watermark_seeding_scheme simple_1"
-elif [ "$watermark" = "kgw-k1-gamma0.25-delta2" ]; then
-    watermark_args="--watermark_type kgw \
-    --kgw_watermark_gamma 0.25 \
-    --kgw_watermark_delta 2.0 \
-    --kgw_watermark_seeding_scheme simple_1"
-elif [ "$watermark" = "kgw-k2-gamma0.25-delta2" ]; then
-    watermark_args="--watermark_type kgw \
-    --kgw_watermark_gamma 0.25 \
-    --kgw_watermark_delta 2.0 \
-    --kgw_watermark_seeding_scheme simple_2"
-elif [ "$watermark" = "kth-shift1" ]; then
-    watermark_args="--watermark_type kth \
-    --kth_watermark_key_len 256 \
-    --kth_watermark_num_shifts 1"
-elif [ "$watermark" = "kth-shift2" ]; then
-    watermark_args="--watermark_type kth \
-    --kth_watermark_key_len 256 \
-    --kth_watermark_num_shifts 2"
-elif [ "$watermark" = "kth-shift4" ]; then
-    watermark_args="--watermark_type kth \
-    --kth_watermark_key_len 256 \
-    --kth_watermark_num_shifts 4"
-elif [ "$watermark" = "kth-shift256" ]; then
-    watermark_args="--watermark_type kth \
-    --kth_watermark_key_len 256 \
-    --kth_watermark_num_shifts 256"
-else
-    echo "Unsupported watermark type ${watermark}."
-    exit 1
-fi
+watermark_args=$(get_watermark_args "$watermark")
+echo ${watermark_args}
+
 
 # --- Batch & block sizes ---
 if [[ "$watermark" == kth* ]]; then
@@ -94,12 +52,12 @@ if [[ "$watermark" == kth* ]]; then
     block_size=256
 else
     batch_size=8
-    block_size=256
+    block_size=128
 fi
 
 echo "[INFO] PROJECT_ROOT: $PROJECT_ROOT"
 echo "[INFO] Watermark: $watermark"
-echo "[INFO] Model (teacher): $llama"
+echo "[INFO] Model (teacher): $model"
 echo "[INFO] Output dir: ${out_dir}${model_name}"
 echo "[INFO] GPUs: 8  |  Master port: $port"
 
@@ -112,7 +70,7 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-12}
 PYTHONPATH=/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master \
 srun --ntasks=1 \
   torchrun --nnodes=1 --nproc_per_node=8 --master_port="${port}" train_logit_distill.py \
-    --model_name_or_path "${model_path}/${llama}" \
+    --model_name_or_path "${model_path}/${model}" \
     --dataset_name "${dataset_path}/Skylion007/openwebtext" \
     --streaming \
     --per_device_train_batch_size "${batch_size}" \
@@ -132,4 +90,4 @@ srun --ntasks=1 \
     ${watermark_args} \
     --watermark_seed 42 \
     --fsdp "full_shard auto_wrap" \
-    --fsdp_transformer_layer_cls_to_wrap "LlamaDecoderLayer"
+    --fsdp_transformer_layer_cls_to_wrap "${FSDP_LAYER}"
