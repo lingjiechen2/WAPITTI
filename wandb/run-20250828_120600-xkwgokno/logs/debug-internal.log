@@ -1,0 +1,15 @@
+{"time":"2025-08-28T12:06:00.689989382+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/wandb/run-20250828_120600-xkwgokno/logs/debug-core.log"}
+{"time":"2025-08-28T12:06:00.807257151+08:00","level":"INFO","msg":"created new stream","id":"xkwgokno"}
+{"time":"2025-08-28T12:06:00.807766392+08:00","level":"INFO","msg":"stream: started","id":"xkwgokno"}
+{"time":"2025-08-28T12:06:00.80784516+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"xkwgokno"}
+{"time":"2025-08-28T12:06:00.808112392+08:00","level":"INFO","msg":"sender: started","stream_id":"xkwgokno"}
+{"time":"2025-08-28T12:06:00.808337262+08:00","level":"INFO","msg":"handler: started","stream_id":"xkwgokno"}
+{"time":"2025-08-28T12:06:30.812960235+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-08-28T12:07:03.194562018+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-08-28T12:07:31.41498297+08:00","level":"INFO","msg":"stream: closing","id":"xkwgokno"}
+{"time":"2025-08-28T12:07:31.415503447+08:00","level":"INFO","msg":"handler: closed","stream_id":"xkwgokno"}
+{"time":"2025-08-28T12:07:31.415540157+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"xkwgokno"}
+{"time":"2025-08-28T12:07:31.415960406+08:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: api: failed sending: POST https://api.wandb.ai/graphql giving up after 3 attempt(s): context canceled"}
+{"time":"2025-08-28T12:07:31.416789694+08:00","level":"INFO","msg":"sender: closed","stream_id":"xkwgokno"}
+{"time":"2025-08-28T12:07:31.416854088+08:00","level":"WARN","msg":"runwork: ignoring record after close","work":{}}
+{"time":"2025-08-28T12:07:31.417416842+08:00","level":"INFO","msg":"stream: closed","id":"xkwgokno"}

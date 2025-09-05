@@ -1,0 +1,15 @@
+{"time":"2025-08-29T08:01:34.136936983+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/wandb/run-20250829_080134-lo6zaape/logs/debug-core.log"}
+{"time":"2025-08-29T08:01:34.254066511+08:00","level":"INFO","msg":"created new stream","id":"lo6zaape"}
+{"time":"2025-08-29T08:01:34.254536069+08:00","level":"INFO","msg":"stream: started","id":"lo6zaape"}
+{"time":"2025-08-29T08:01:34.254555617+08:00","level":"INFO","msg":"handler: started","stream_id":"lo6zaape"}
+{"time":"2025-08-29T08:01:34.254552322+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"lo6zaape"}
+{"time":"2025-08-29T08:01:34.254567472+08:00","level":"INFO","msg":"sender: started","stream_id":"lo6zaape"}
+{"time":"2025-08-29T08:01:34.645450511+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-29T12:15:59.088935519+08:00","level":"INFO","msg":"stream: closing","id":"lo6zaape"}
+{"time":"2025-08-29T12:15:59.089010078+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-29T12:15:59.09040219+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-29T12:16:00.869463262+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-29T12:16:01.745576817+08:00","level":"INFO","msg":"handler: closed","stream_id":"lo6zaape"}
+{"time":"2025-08-29T12:16:01.745644303+08:00","level":"INFO","msg":"sender: closed","stream_id":"lo6zaape"}
+{"time":"2025-08-29T12:16:01.745639743+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"lo6zaape"}
+{"time":"2025-08-29T12:16:01.746800445+08:00","level":"INFO","msg":"stream: closed","id":"lo6zaape"}

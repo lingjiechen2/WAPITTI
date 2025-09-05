@@ -1,0 +1,46 @@
+  0%|          | 0/5000 [00:00<?, ?it/s][WARNING|logging.py:328] 2025-08-29 01:39:59,184 >> `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+  0%|          | 1/5000 [00:07<9:50:16,  7.08s/it]Traceback (most recent call last):
+{'loss': 0.0744, 'grad_norm': 0.7514688968658447, 'learning_rate': 0.0, 'epoch': 0.0}
+  File "/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/train_logit_distill.py", line 915, in <module>
+    main()
+  File "/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/train_logit_distill.py", line 859, in main
+    train_result = trainer.train(resume_from_checkpoint=checkpoint)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/transformers/trainer.py", line 2245, in train
+    return inner_training_loop(
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/transformers/trainer.py", line 2560, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/transformers/trainer.py", line 3736, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+  File "/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/train_logit_distill.py", line 361, in compute_loss
+    loss = self.loss_fct(
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 541, in forward
+    return F.kl_div(
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/nn/functional.py", line 3381, in kl_div
+    reduced = torch.kl_div(input, target, reduction_enum, log_target=log_target)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.96 GiB. GPU 0 has a total capacity of 79.32 GiB of which 1.63 GiB is free. Including non-PyTorch memory, this process has 77.69 GiB memory in use. Of the allocated memory 72.30 GiB is allocated by PyTorch, and 3.17 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/train_logit_distill.py", line 915, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/train_logit_distill.py", line 859, in main
+[rank0]:     train_result = trainer.train(resume_from_checkpoint=checkpoint)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/transformers/trainer.py", line 2245, in train
+[rank0]:     return inner_training_loop(
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/transformers/trainer.py", line 2560, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/transformers/trainer.py", line 3736, in training_step
+[rank0]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/train_logit_distill.py", line 361, in compute_loss
+[rank0]:     loss = self.loss_fct(
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 541, in forward
+[rank0]:     return F.kl_div(
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/nn/functional.py", line 3381, in kl_div
+[rank0]:     reduced = torch.kl_div(input, target, reduction_enum, log_target=log_target)
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.96 GiB. GPU 0 has a total capacity of 79.32 GiB of which 1.63 GiB is free. Including non-PyTorch memory, this process has 77.69 GiB memory in use. Of the allocated memory 72.30 GiB is allocated by PyTorch, and 3.17 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

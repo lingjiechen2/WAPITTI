@@ -1,0 +1,10 @@
+{"time":"2025-08-28T23:44:04.064339174+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/wandb/run-20250828_234404-wal86kff/logs/debug-core.log"}
+{"time":"2025-08-28T23:44:04.183290361+08:00","level":"INFO","msg":"created new stream","id":"wal86kff"}
+{"time":"2025-08-28T23:44:04.183742782+08:00","level":"INFO","msg":"stream: started","id":"wal86kff"}
+{"time":"2025-08-28T23:44:04.183750348+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"wal86kff"}
+{"time":"2025-08-28T23:44:04.183975348+08:00","level":"INFO","msg":"handler: started","stream_id":"wal86kff"}
+{"time":"2025-08-28T23:44:04.184071073+08:00","level":"INFO","msg":"sender: started","stream_id":"wal86kff"}
+{"time":"2025-08-28T23:44:04.647784145+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-28T23:44:16.136678436+08:00","level":"INFO","msg":"stream: closing","id":"wal86kff"}
+{"time":"2025-08-28T23:44:16.136923225+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-28T23:44:16.138084382+08:00","level":"INFO","msg":"Stopped system monitor"}

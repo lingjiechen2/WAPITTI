@@ -1,0 +1,19 @@
+{"time":"2025-08-28T12:18:32.424824473+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/wandb/run-20250828_121832-apdivk5u/logs/debug-core.log"}
+{"time":"2025-08-28T12:18:32.542135395+08:00","level":"INFO","msg":"created new stream","id":"apdivk5u"}
+{"time":"2025-08-28T12:18:32.542763012+08:00","level":"INFO","msg":"stream: started","id":"apdivk5u"}
+{"time":"2025-08-28T12:18:32.542788128+08:00","level":"INFO","msg":"sender: started","stream_id":"apdivk5u"}
+{"time":"2025-08-28T12:18:32.542791972+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"apdivk5u"}
+{"time":"2025-08-28T12:18:32.543032013+08:00","level":"INFO","msg":"handler: started","stream_id":"apdivk5u"}
+{"time":"2025-08-28T12:18:32.549569247+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: tls: first record does not look like a TLS handshake"}
+{"time":"2025-08-28T12:18:34.7324159+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: tls: first record does not look like a TLS handshake"}
+{"time":"2025-08-28T12:18:38.960453318+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: tls: first record does not look like a TLS handshake"}
+{"time":"2025-08-28T12:18:48.812723816+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: tls: first record does not look like a TLS handshake"}
+{"time":"2025-08-28T12:19:06.610170329+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: tls: first record does not look like a TLS handshake"}
+{"time":"2025-08-28T12:19:43.134887215+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": proxyconnect tcp: tls: first record does not look like a TLS handshake"}
+{"time":"2025-08-28T12:20:03.085570102+08:00","level":"INFO","msg":"stream: closing","id":"apdivk5u"}
+{"time":"2025-08-28T12:20:03.086040477+08:00","level":"INFO","msg":"handler: closed","stream_id":"apdivk5u"}
+{"time":"2025-08-28T12:20:03.086063016+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"apdivk5u"}
+{"time":"2025-08-28T12:20:03.086512948+08:00","level":"ERROR","msg":"sender: upsertRun:","error":"failed to upsert bucket: api: failed sending: context canceled"}
+{"time":"2025-08-28T12:20:03.087140308+08:00","level":"INFO","msg":"sender: closed","stream_id":"apdivk5u"}
+{"time":"2025-08-28T12:20:03.087486122+08:00","level":"INFO","msg":"stream: closed","id":"apdivk5u"}
+{"time":"2025-08-28T12:20:03.087226198+08:00","level":"WARN","msg":"runwork: ignoring record after close","work":{}}

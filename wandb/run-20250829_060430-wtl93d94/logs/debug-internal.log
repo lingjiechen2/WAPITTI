@@ -1,0 +1,15 @@
+{"time":"2025-08-29T06:04:30.205071139+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/wandb/run-20250829_060430-wtl93d94/logs/debug-core.log"}
+{"time":"2025-08-29T06:04:30.32153764+08:00","level":"INFO","msg":"created new stream","id":"wtl93d94"}
+{"time":"2025-08-29T06:04:30.322018318+08:00","level":"INFO","msg":"stream: started","id":"wtl93d94"}
+{"time":"2025-08-29T06:04:30.322041642+08:00","level":"INFO","msg":"sender: started","stream_id":"wtl93d94"}
+{"time":"2025-08-29T06:04:30.322041299+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"wtl93d94"}
+{"time":"2025-08-29T06:04:30.32224388+08:00","level":"INFO","msg":"handler: started","stream_id":"wtl93d94"}
+{"time":"2025-08-29T06:04:30.949198647+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-29T10:17:27.352732053+08:00","level":"INFO","msg":"stream: closing","id":"wtl93d94"}
+{"time":"2025-08-29T10:17:27.352811095+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-29T10:17:27.354089828+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-29T10:17:30.856633115+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-29T10:17:31.220461104+08:00","level":"INFO","msg":"handler: closed","stream_id":"wtl93d94"}
+{"time":"2025-08-29T10:17:31.220500902+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"wtl93d94"}
+{"time":"2025-08-29T10:17:31.220535612+08:00","level":"INFO","msg":"sender: closed","stream_id":"wtl93d94"}
+{"time":"2025-08-29T10:17:31.221870738+08:00","level":"INFO","msg":"stream: closed","id":"wtl93d94"}

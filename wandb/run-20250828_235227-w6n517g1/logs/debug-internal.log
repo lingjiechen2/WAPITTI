@@ -1,0 +1,7 @@
+{"time":"2025-08-28T23:52:27.065946817+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/wandb/run-20250828_235227-w6n517g1/logs/debug-core.log"}
+{"time":"2025-08-28T23:52:27.184313098+08:00","level":"INFO","msg":"created new stream","id":"w6n517g1"}
+{"time":"2025-08-28T23:52:27.184809522+08:00","level":"INFO","msg":"stream: started","id":"w6n517g1"}
+{"time":"2025-08-28T23:52:27.184834674+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"w6n517g1"}
+{"time":"2025-08-28T23:52:27.184833061+08:00","level":"INFO","msg":"sender: started","stream_id":"w6n517g1"}
+{"time":"2025-08-28T23:52:27.185066469+08:00","level":"INFO","msg":"handler: started","stream_id":"w6n517g1"}
+{"time":"2025-08-28T23:52:27.606376113+08:00","level":"INFO","msg":"Starting system monitor"}

@@ -1,0 +1,65 @@
+  0%|          | 0/5000 [00:00<?, ?it/s][WARNING|logging.py:328] 2025-08-29 12:36:07,645 >> `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+Traceback (most recent call last):
+  File "/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/train_logit_distill.py", line 915, in <module>
+    main()
+  File "/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/train_logit_distill.py", line 859, in main
+    train_result = trainer.train(resume_from_checkpoint=checkpoint)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/transformers/trainer.py", line 2245, in train
+    return inner_training_loop(
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/transformers/trainer.py", line 2611, in _inner_training_loop
+    self.optimizer.step()
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/accelerate/optimizer.py", line 165, in step
+    self.scaler.step(self.optimizer, closure)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/amp/grad_scaler.py", line 457, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/amp/grad_scaler.py", line 352, in _maybe_opt_step
+    retval = optimizer.step(*args, **kwargs)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/accelerate/optimizer.py", line 210, in patched_step
+    return method(*args, **kwargs)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/lr_scheduler.py", line 137, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/optimizer.py", line 487, in wrapper
+    out = func(*args, **kwargs)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/adamw.py", line 220, in step
+    adamw(
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/optimizer.py", line 154, in maybe_fallback
+    return func(*args, **kwargs)
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/adamw.py", line 782, in adamw
+    func(
+  File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/adamw.py", line 606, in _multi_tensor_adamw
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 79.32 GiB of which 11.56 MiB is free. Including non-PyTorch memory, this process has 79.31 GiB memory in use. Of the allocated memory 76.81 GiB is allocated by PyTorch, and 273.82 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/train_logit_distill.py", line 915, in <module>
+[rank0]:     main()
+[rank0]:   File "/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/train_logit_distill.py", line 859, in main
+[rank0]:     train_result = trainer.train(resume_from_checkpoint=checkpoint)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/transformers/trainer.py", line 2245, in train
+[rank0]:     return inner_training_loop(
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/transformers/trainer.py", line 2611, in _inner_training_loop
+[rank0]:     self.optimizer.step()
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/accelerate/optimizer.py", line 165, in step
+[rank0]:     self.scaler.step(self.optimizer, closure)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/amp/grad_scaler.py", line 457, in step
+[rank0]:     retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/amp/grad_scaler.py", line 352, in _maybe_opt_step
+[rank0]:     retval = optimizer.step(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/accelerate/optimizer.py", line 210, in patched_step
+[rank0]:     return method(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/lr_scheduler.py", line 137, in wrapper
+[rank0]:     return func.__get__(opt, opt.__class__)(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/optimizer.py", line 487, in wrapper
+[rank0]:     out = func(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+[rank0]:     ret = func(self, *args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/adamw.py", line 220, in step
+[rank0]:     adamw(
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/optimizer.py", line 154, in maybe_fallback
+[rank0]:     return func(*args, **kwargs)
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/adamw.py", line 782, in adamw
+[rank0]:     func(
+[rank0]:   File "/mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/lib/python3.10/site-packages/torch/optim/adamw.py", line 606, in _multi_tensor_adamw
+[rank0]:     exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 79.32 GiB of which 11.56 MiB is free. Including non-PyTorch memory, this process has 79.31 GiB memory in use. Of the allocated memory 76.81 GiB is allocated by PyTorch, and 273.82 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

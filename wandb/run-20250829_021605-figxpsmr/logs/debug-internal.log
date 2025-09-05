@@ -1,0 +1,7 @@
+{"time":"2025-08-29T02:16:05.752859534+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/wandb/run-20250829_021605-figxpsmr/logs/debug-core.log"}
+{"time":"2025-08-29T02:16:05.871060834+08:00","level":"INFO","msg":"created new stream","id":"figxpsmr"}
+{"time":"2025-08-29T02:16:05.871525494+08:00","level":"INFO","msg":"stream: started","id":"figxpsmr"}
+{"time":"2025-08-29T02:16:05.871538062+08:00","level":"INFO","msg":"sender: started","stream_id":"figxpsmr"}
+{"time":"2025-08-29T02:16:05.871547571+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"figxpsmr"}
+{"time":"2025-08-29T02:16:05.871733243+08:00","level":"INFO","msg":"handler: started","stream_id":"figxpsmr"}
+{"time":"2025-08-29T02:16:06.325749806+08:00","level":"INFO","msg":"Starting system monitor"}

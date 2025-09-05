@@ -1,0 +1,15 @@
+{"time":"2025-08-29T15:01:45.734692548+08:00","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master/wandb/run-20250829_150145-zrk86kck/logs/debug-core.log"}
+{"time":"2025-08-29T15:01:45.852608519+08:00","level":"INFO","msg":"created new stream","id":"zrk86kck"}
+{"time":"2025-08-29T15:01:45.85308171+08:00","level":"INFO","msg":"stream: started","id":"zrk86kck"}
+{"time":"2025-08-29T15:01:45.853111851+08:00","level":"INFO","msg":"writer: Do: started","stream_id":"zrk86kck"}
+{"time":"2025-08-29T15:01:45.853346528+08:00","level":"INFO","msg":"sender: started","stream_id":"zrk86kck"}
+{"time":"2025-08-29T15:01:45.853507639+08:00","level":"INFO","msg":"handler: started","stream_id":"zrk86kck"}
+{"time":"2025-08-29T15:01:46.261687816+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-08-29T15:04:45.893233828+08:00","level":"INFO","msg":"stream: closing","id":"zrk86kck"}
+{"time":"2025-08-29T15:04:45.893326642+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-08-29T15:04:45.897795049+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-08-29T15:04:46.743057425+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-08-29T15:04:47.092770066+08:00","level":"INFO","msg":"handler: closed","stream_id":"zrk86kck"}
+{"time":"2025-08-29T15:04:47.092827722+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":"zrk86kck"}
+{"time":"2025-08-29T15:04:47.092837352+08:00","level":"INFO","msg":"sender: closed","stream_id":"zrk86kck"}
+{"time":"2025-08-29T15:04:47.099435609+08:00","level":"INFO","msg":"stream: closed","id":"zrk86kck"}

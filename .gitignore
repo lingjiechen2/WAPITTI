@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and outputs
+logs/
+result/
+wandb/
+checkpoints/
+
+# Environment
+.env
+.conda
+.venv/
+*.egg-info/
+
+# System files
+.DS_Store
+Thumbs.db
