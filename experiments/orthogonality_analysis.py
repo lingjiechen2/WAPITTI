@@ -5,14 +5,6 @@ import copy
 import json
 import logging
 
-# Set up environment variables for proxies
-os.environ['http_proxy'] = "http://10.176.52.116:7890"
-os.environ['https_proxy'] = "http://10.176.52.116:7890"
-os.environ['all_proxy'] = "socks5://10.176.52.116:7891"
-
-# Adjust the system path
-sys.path.append('/remote-home1/miintern1/watermark-learnability')
-
 # Import necessary modules
 from typing import Dict
 from itertools import chain

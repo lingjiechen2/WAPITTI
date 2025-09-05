@@ -4,7 +4,7 @@
 #SBATCH --quotatype=spot
 #SBATCH --requeue
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:0
+#SBATCH --gres=gpu:8
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=12
 #SBATCH --mem-per-cpu=8G
@@ -21,7 +21,9 @@ source scripts/watermark_vector/utils.sh
 watermark=${1:?Usage: sbatch train_logit_distill.sbatch <watermark> <out_dir> <port> [llama_model]}
 out_dir="/mnt/lustrenew/mllm_safety-shared/tmp/fanyuyu/models/watermark/"
 port=$((20000 + RANDOM % 20000))
-model="meta-llama/Llama-2-7b-hf"
+# model="meta-llama/Llama-2-7b-hf"
+model=${2:-"meta-llama/Meta-Llama-3.1-8B"}
+
 model_path="/mnt/lustrenew/mllm_safety-shared/models/huggingface"
 dataset_path="/mnt/lustrenew/mllm_safety-shared/datasets/huggingface"
 

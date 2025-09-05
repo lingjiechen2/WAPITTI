@@ -1,0 +1,9 @@
+2025-09-06 04:14:19,198 - INFO - Processing checkpoint-4000 with coefficient 0.0
+2025-09-06 04:14:19,198 - INFO - Output directory: /mnt/petrelfs/fanyuyu/fyy/WAPITI-Code-Base-master/results/watermark_vectors/Meta_Llama_3.1_8B/Meta_Llama_3.1_8B_logit_watermark_distill_kgw_k1_gamma0.25_delta2/checkpoint_4000/coefficient_0.0
+2025-09-06 04:14:22,031 - INFO - Using device: cuda
+2025-09-06 04:14:22,089 - INFO - CUDA device count: 1
+2025-09-06 04:14:22,090 - INFO - Loading and processing dataset...
+2025-09-06 04:14:25,812 - INFO - Data loaded and processed successfully
+2025-09-06 04:14:25,812 - INFO - Loading models...
+2025-09-06 04:14:34,639 - INFO - gcc -pthread -B /mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/include -fPIC -O2 -isystem /mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/include -fPIC -c /tmp/tmpvw9thnma/test.c -o /tmp/tmpvw9thnma/test.o
+2025-09-06 04:14:34,816 - INFO - gcc -pthread -B /mnt/petrelfs/fanyuyu/miniconda3/envs/visual-stitching/compiler_compat /tmp/tmpvw9thnma/test.o -laio -o /tmp/tmpvw9thnma/a.out

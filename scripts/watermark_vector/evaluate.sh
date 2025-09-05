@@ -5,8 +5,8 @@ source scripts/watermark_vector/utils.sh
 
 # Configuration
 BASE_OUTPUT_DIR="/mnt/petrelfs/fanyuyu/fyy/WAPITI-Code-Base-master/results/watermark_vectors"
-NUM_SAMPLES=32
-BATCH_SIZE=16
+NUM_SAMPLES=96
+BATCH_SIZE=32
 USER="fanyuyu"
 MAX_SUBMITTED_JOBS=50
 
@@ -15,7 +15,7 @@ VANILLA_MODEL="/mnt/lustrenew/mllm_safety-shared/models/huggingface/meta-llama/M
 declare -a TESTED_MODELS=("${VANILLA_MODEL}")
 
 # Define watermark models directory
-WATERMARK_MODELS_DIR="/mnt/lustrenew/mllm_safety-shared/tmp/fanyuyu/models/watermark/meta-llama/Meta-Llama-3.1-8B-logit-watermark-distill-kgw-k1-gamma0.25-delta1"
+WATERMARK_MODELS_DIR="/mnt/lustrenew/mllm_safety-shared/tmp/fanyuyu/models/watermark/meta-llama/Meta-Llama-3.1-8B-logit-watermark-distill-kgw-k1-gamma0.25-delta2"
 
 # Find all subdirectories under WATERMARK_MODELS_DIR
 echo "Finding watermark models in ${WATERMARK_MODELS_DIR}..."
