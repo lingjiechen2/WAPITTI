@@ -35,6 +35,9 @@ elif [[ "${model%%/*}" == "Qwen" ]]; then
 fi
 
 echo $FSDP_LAYER
+MASTER_ADDR=$(scontrol show hostnames "$SLURM_NODELIST" | head -n1)
+export MASTER_ADDR
+echo $MASTER_ADDR
 
 # --- Paths / env (adjust PROJECT_ROOT if needed) ---
 PROJECT_ROOT=${PROJECT_ROOT:-$(pwd)}
@@ -54,7 +57,7 @@ if [[ "$watermark" == kth* ]]; then
     batch_size=32
     block_size=256
 else
-    batch_size=4
+    batch_size=1
     block_size=128
 fi
 
@@ -71,8 +74,13 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-12}
 
 # Launch with srun so Slurm handles cgroups correctly
 PYTHONPATH=/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master \
-srun --ntasks=1 \
-  torchrun --nnodes=1 --nproc_per_node=${GPU_COUNT} --master_port="${port}" train_logit_distill.py \
+srun --ntasks=1 torchrun \
+  --nnodes=${SLURM_NNODES} \
+  --nproc_per_node=${GPU_COUNT} \
+  --master_port="${port}" \
+  --rdzv_backend=c10d \
+  --rdzv_endpoint=$MASTER_ADDR:$port \
+  train_logit_distill.py \
     --model_name_or_path "${model_path}/${model}" \
     --dataset_name "${dataset_path}/Skylion007/openwebtext" \
     --streaming \
