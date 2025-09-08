@@ -13,6 +13,7 @@
 #SBATCH -o logs/%x-%j.out
 #SBATCH -e logs/%x-%j.err
 
+GPU_COUNT=8
 set -euo pipefail
 source scripts/watermark_vector/utils.sh
 
@@ -53,7 +54,7 @@ if [[ "$watermark" == kth* ]]; then
     batch_size=32
     block_size=256
 else
-    batch_size=8
+    batch_size=4
     block_size=128
 fi
 
@@ -61,7 +62,7 @@ echo "[INFO] PROJECT_ROOT: $PROJECT_ROOT"
 echo "[INFO] Watermark: $watermark"
 echo "[INFO] Model (teacher): $model"
 echo "[INFO] Output dir: ${out_dir}${model_name}"
-echo "[INFO] GPUs: 8  |  Master port: $port"
+echo "[INFO] GPUs: ${GPU_COUNT}  |  Master port: $port"
 
 # Optional: tune NCCL for single-node multi-GPU stability
 export NCCL_DEBUG=WARN
@@ -71,7 +72,7 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK:-12}
 # Launch with srun so Slurm handles cgroups correctly
 PYTHONPATH=/mnt/petrelfs/fanyuyu/lingjie_tmp/WAPITI-Code-Base-master \
 srun --ntasks=1 \
-  torchrun --nnodes=1 --nproc_per_node=8 --master_port="${port}" train_logit_distill.py \
+  torchrun --nnodes=1 --nproc_per_node=${GPU_COUNT} --master_port="${port}" train_logit_distill.py \
     --model_name_or_path "${model_path}/${model}" \
     --dataset_name "${dataset_path}/Skylion007/openwebtext" \
     --streaming \

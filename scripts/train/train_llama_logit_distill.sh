@@ -4,7 +4,8 @@
 # Define model and watermark lists
 MODELS=(
     "meta-llama/Meta-Llama-3.1-8B"
-    "meta-llama/Llama-2-7b-hf"
+    # "meta-llama/Llama-2-7b-hf"
+    # "Qwen/Qwen2.5-3B"
 )
 
 WATERMARKS=(
@@ -12,6 +13,7 @@ WATERMARKS=(
     "kgw-k0-gamma0.25-delta2"
     "kgw-k1-gamma0.25-delta1"
     "kgw-k1-gamma0.25-delta2"
+    "kgw-k2-gamma0.25-delta1"
     "kgw-k2-gamma0.25-delta2"
 )
 
@@ -24,7 +26,8 @@ check_complete() {
     local watermark="$2"
     local model_name="${model}-logit-watermark-distill-${watermark}"
     local target_path="${out_dir}${model_name}"
-    
+    echo $target_path
+
     # Check if all 5 checkpoint directories exist
     for i in 1000 2000 3000 4000 5000; do
         if [ ! -d "${target_path}/checkpoint-${i}" ]; then

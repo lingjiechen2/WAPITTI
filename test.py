@@ -1,6 +1,6 @@
 from transformers import AutoModelForCausalLM
 
-model = AutoModelForCausalLM.from_pretrained("/mnt/lustrenew/mllm_safety-shared/models/huggingface/meta-llama/Llama-3.2-3B-Instruct/", trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained("/mnt/lustrenew/mllm_safety-shared/models/huggingface/Qwen/Qwen2.5-3B", trust_remote_code=True)
 
 # Print the architecture
 print(model)

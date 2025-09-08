@@ -23,6 +23,6 @@
         "top_k": 0,
         "do_sample": true
     },
-    "num_samples": 32,
-    "batch_size": 16
+    "num_samples": 96,
+    "batch_size": 32
 }

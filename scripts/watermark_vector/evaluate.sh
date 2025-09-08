@@ -15,7 +15,7 @@ VANILLA_MODEL="/mnt/lustrenew/mllm_safety-shared/models/huggingface/meta-llama/M
 declare -a TESTED_MODELS=("${VANILLA_MODEL}")
 
 # Define watermark models directory
-WATERMARK_MODELS_DIR="/mnt/lustrenew/mllm_safety-shared/tmp/fanyuyu/models/watermark/meta-llama/Meta-Llama-3.1-8B-logit-watermark-distill-kgw-k1-gamma0.25-delta2"
+WATERMARK_MODELS_DIR="/mnt/lustrenew/mllm_safety-shared/tmp/fanyuyu/models/watermark/meta-llama/Meta-Llama-3.1-8B-logit-watermark-distill-kgw-k1-gamma0.25-delta1"
 
 # Find all subdirectories under WATERMARK_MODELS_DIR
 echo "Finding watermark models in ${WATERMARK_MODELS_DIR}..."

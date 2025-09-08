@@ -119,14 +119,14 @@ def create_comprehensive_plot(plot_data, tested_model, watermark_name, figsize):
     checkpoints = sorted(plot_data.keys())
     colors = plt.cm.tab10(np.linspace(0, 1, len(checkpoints)))
     
-    # Subplot configurations
+   # Subplot configurations - WATERMARKED metrics on first row, VANILLA on second row
     subplot_configs = [
-        ('vanilla_p_value', 'Vanilla P-Value', axes[0, 0]),
-        ('watermarked_p_value', 'Watermarked P-Value', axes[0, 1]),
-        ('vanilla_perplexity', 'Vanilla Perplexity', axes[0, 2]),
-        ('watermarked_perplexity', 'Watermarked Perplexity', axes[1, 0]),
-        ('vanilla_rep3', 'Vanilla Seq-Rep-3', axes[1, 1]),
-        ('watermarked_rep3', 'Watermarked Seq-Rep-3', axes[1, 2])
+        ('watermarked_p_value', 'Watermarked P-Value', axes[0, 0]),
+        ('watermarked_perplexity', 'Watermarked Perplexity', axes[0, 1]),
+        ('watermarked_rep3', 'Watermarked Seq-Rep-3', axes[0, 2]),
+        ('vanilla_p_value', 'Vanilla P-Value', axes[1, 0]),
+        ('vanilla_perplexity', 'Vanilla Perplexity', axes[1, 1]),
+        ('vanilla_rep3', 'Vanilla Seq-Rep-3', axes[1, 2])
     ]
     
     for metric, title, ax in subplot_configs:
