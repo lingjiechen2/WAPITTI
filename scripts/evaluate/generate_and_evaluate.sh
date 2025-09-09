@@ -4,7 +4,7 @@ ppl_model="meta-llama/Meta-Llama-3.1-8B"
 
 num_tokens=200
 prompt_length=50
-num_samples=100
+num_samples=1000
 MODEL_PATH_PREFIX="/mnt/lustrenew/mllm_safety-shared/models/huggingface"
 DATASET_PATH_PREFIX="/mnt/lustrenew/mllm_safety-shared/datasets/huggingface"
 TRAINED_MODEL_PATH_PREFIX="/mnt/lustrenew/mllm_safety-shared/tmp/fanyuyu/models/watermark/"
