@@ -1,0 +1,2 @@
+2025-09-11 01:59:31,237 - INFO - Processing checkpoint-2000 with coefficient 1.8
+2025-09-11 01:59:31,237 - INFO - Output directory: /mnt/petrelfs/fanyuyu/fyy/WAPITI-Code-Base-master/results/watermark_vectors/Llama_2_7b_hf/Llama_2_7b_hf_logit_watermark_distill_kgw_k0_gamma0.25_delta2/checkpoint_2000/coefficient_1.8
