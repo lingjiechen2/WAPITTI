@@ -1,0 +1,28 @@
+{
+    "watermark_name": "Qwen2.5-3B-logit-watermark-distill-kgw-k0-gamma0.25-delta2",
+    "watermark_model": "checkpoint-2000",
+    "tested_model_name": "/mnt/lustrenew/mllm_safety-shared/models/huggingface/Qwen/Qwen2.5-3B",
+    "vanilla_model_name": "/mnt/lustrenew/mllm_safety-shared/models/huggingface/Qwen/Qwen2.5-3B",
+    "coefficient": 1.8,
+    "watermark_config": {
+        "type": "kgw",
+        "kgw_device": "cpu",
+        "k": 1,
+        "vocab_size": 151665,
+        "gamma": 0.25,
+        "delta": 2.0,
+        "seeding_scheme": "simple_0",
+        "hash_key": 15485863,
+        "select_green_tokens": true
+    },
+    "generation_config": {
+        "min_new_tokens": 200,
+        "max_new_tokens": 200,
+        "temperature": 1.0,
+        "top_p": 0.9,
+        "top_k": 0,
+        "do_sample": true
+    },
+    "num_samples": 96,
+    "batch_size": 32
+}

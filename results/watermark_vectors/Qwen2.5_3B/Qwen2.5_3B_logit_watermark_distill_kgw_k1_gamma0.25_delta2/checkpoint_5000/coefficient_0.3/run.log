@@ -1,0 +1,5 @@
+2025-09-11 12:27:16,845 - INFO - Processing checkpoint-5000 with coefficient 0.3
+2025-09-11 12:27:16,845 - INFO - Output directory: /mnt/petrelfs/fanyuyu/fyy/WAPITI-Code-Base-master/results/watermark_vectors/Qwen2.5_3B/Qwen2.5_3B_logit_watermark_distill_kgw_k1_gamma0.25_delta2/checkpoint_5000/coefficient_0.3
+2025-09-11 12:27:19,456 - INFO - Using device: cuda
+2025-09-11 12:27:19,532 - INFO - CUDA device count: 1
+2025-09-11 12:27:19,532 - INFO - Loading and processing dataset...
