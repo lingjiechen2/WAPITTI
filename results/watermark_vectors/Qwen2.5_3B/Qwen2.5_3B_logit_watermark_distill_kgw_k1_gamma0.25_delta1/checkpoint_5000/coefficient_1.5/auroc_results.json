@@ -1,0 +1,19 @@
+{
+  "auroc": 0.9814995659722222,
+  "tpr_at_fpr_005": 0.9520833333333334,
+  "tpr_at_fpr_01": 0.9583333333333334,
+  "num_watermarked_samples": 96,
+  "num_null_samples": 96,
+  "matched_ref_config": "kgw-simple_1-gamma0.25",
+  "watermark_config": {
+    "type": "kgw",
+    "kgw_device": "cpu",
+    "k": 1,
+    "vocab_size": 151665,
+    "gamma": 0.25,
+    "delta": 1.0,
+    "seeding_scheme": "simple_1",
+    "hash_key": 15485863,
+    "select_green_tokens": true
+  }
+}

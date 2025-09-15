@@ -1,0 +1,138 @@
+Watermark Vector Analysis Summary
+==================================================
+
+Checkpoint 1000:
+--------------------
+  vanilla_p_value:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.9136 to 0.9136
+    Mean value: 0.9136
+  watermarked_p_value:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0000 to 0.9136
+    Mean value: 0.1104
+  vanilla_perplexity:
+    Coefficient range: 0.0 to 3.9
+    Value range: 7.8359 to 7.8359
+    Mean value: 7.8359
+  watermarked_perplexity:
+    Coefficient range: 0.0 to 3.9
+    Value range: 5.2988 to 13.6055
+    Mean value: 9.3945
+  vanilla_rep3:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0202 to 0.0202
+    Mean value: 0.0202
+  watermarked_rep3:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0202 to 0.6111
+    Mean value: 0.1650
+
+Checkpoint 2000:
+--------------------
+  vanilla_p_value:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.9136 to 0.9136
+    Mean value: 0.9136
+  watermarked_p_value:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0000 to 0.9136
+    Mean value: 0.1153
+  vanilla_perplexity:
+    Coefficient range: 0.0 to 3.9
+    Value range: 7.8359 to 7.8359
+    Mean value: 7.8359
+  watermarked_perplexity:
+    Coefficient range: 0.0 to 3.9
+    Value range: 7.7227 to 16.6250
+    Mean value: 10.5286
+  vanilla_rep3:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0202 to 0.0202
+    Mean value: 0.0202
+  watermarked_rep3:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0152 to 0.4823
+    Mean value: 0.1243
+
+Checkpoint 3000:
+--------------------
+  vanilla_p_value:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.9136 to 0.9136
+    Mean value: 0.9136
+  watermarked_p_value:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0000 to 0.9136
+    Mean value: 0.1029
+  vanilla_perplexity:
+    Coefficient range: 0.0 to 3.9
+    Value range: 7.8359 to 7.8359
+    Mean value: 7.8359
+  watermarked_perplexity:
+    Coefficient range: 0.0 to 3.9
+    Value range: 7.7891 to 14.5938
+    Mean value: 10.6616
+  vanilla_rep3:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0202 to 0.0202
+    Mean value: 0.0202
+  watermarked_rep3:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0152 to 0.4697
+    Mean value: 0.1144
+
+Checkpoint 4000:
+--------------------
+  vanilla_p_value:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.9136 to 0.9136
+    Mean value: 0.9136
+  watermarked_p_value:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0000 to 0.9136
+    Mean value: 0.1043
+  vanilla_perplexity:
+    Coefficient range: 0.0 to 3.9
+    Value range: 7.8359 to 7.8359
+    Mean value: 7.8359
+  watermarked_perplexity:
+    Coefficient range: 0.0 to 3.9
+    Value range: 7.1660 to 13.8711
+    Mean value: 10.4820
+  vanilla_rep3:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0202 to 0.0202
+    Mean value: 0.0202
+  watermarked_rep3:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0177 to 0.5000
+    Mean value: 0.1180
+
+Checkpoint 5000:
+--------------------
+  vanilla_p_value:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.9136 to 0.9136
+    Mean value: 0.9136
+  watermarked_p_value:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0000 to 0.9136
+    Mean value: 0.1038
+  vanilla_perplexity:
+    Coefficient range: 0.0 to 3.9
+    Value range: 7.8359 to 7.8359
+    Mean value: 7.8359
+  watermarked_perplexity:
+    Coefficient range: 0.0 to 3.9
+    Value range: 7.7891 to 16.2969
+    Mean value: 10.8131
+  vanilla_rep3:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0202 to 0.0202
+    Mean value: 0.0202
+  watermarked_rep3:
+    Coefficient range: 0.0 to 3.9
+    Value range: 0.0202 to 0.4495
+    Mean value: 0.1024
+
