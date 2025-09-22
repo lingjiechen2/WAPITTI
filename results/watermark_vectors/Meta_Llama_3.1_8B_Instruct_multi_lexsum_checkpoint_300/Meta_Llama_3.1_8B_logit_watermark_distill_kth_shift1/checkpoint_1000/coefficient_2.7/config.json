@@ -1,0 +1,29 @@
+{
+    "watermark_name": "Meta-Llama-3.1-8B-logit-watermark-distill-kth-shift1",
+    "watermark_model": "checkpoint-1000",
+    "tested_model_name": "/mnt/lustrenew/mllm_safety-shared/tmp/fanyuyu/models/finetuned/Meta-Llama-3.1-8B-Instruct-multi_lexsum/Meta_Llama_3.1_8B_Instruct_multi_lexsum_checkpoint_300",
+    "vanilla_model_name": "/mnt/lustrenew/mllm_safety-shared/models/huggingface/meta-llama/Meta-Llama-3.1-8B",
+    "coefficient": 2.7,
+    "watermark_config": {
+        "type": "kth",
+        "possible_shifts": [
+            0
+        ],
+        "seed": 42,
+        "eps": 1e-20,
+        "vocab_size": 128256,
+        "key_len": 256,
+        "cur_shift": 0,
+        "num_shifts": 1
+    },
+    "generation_config": {
+        "min_new_tokens": 200,
+        "max_new_tokens": 200,
+        "temperature": 1.0,
+        "top_p": 0.9,
+        "top_k": 0,
+        "do_sample": true
+    },
+    "num_samples": 96,
+    "batch_size": 32
+}

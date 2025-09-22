@@ -1,0 +1,2 @@
+2025-09-17 04:23:19,603 - INFO - Processing checkpoint-5000 with coefficient 2.4
+2025-09-17 04:23:19,604 - INFO - Output directory: /mnt/petrelfs/fanyuyu/fyy/WAPITI-Code-Base-master/results/watermark_vectors/checkpoint_100/Qwen2.5_3B_logit_watermark_distill_kgw_k2_gamma0.25_delta1/checkpoint_5000/coefficient_2.4

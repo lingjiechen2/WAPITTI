@@ -1,0 +1,11 @@
+2025-09-19 00:14:41,879 - INFO - Processing checkpoint-3000 with coefficient 0.0
+2025-09-19 00:14:41,879 - INFO - Output directory: /mnt/petrelfs/fanyuyu/fyy/WAPITI-Code-Base-master/results/watermark_vectors/Meta_Llama_3.1_8B_Instruct_multi_lexsum_checkpoint_300/Meta_Llama_3.1_8B_logit_watermark_distill_kth_shift1/checkpoint_3000/coefficient_0.0
+2025-09-19 00:14:44,682 - INFO - Using device: cuda
+2025-09-19 00:14:44,737 - INFO - CUDA device count: 1
+2025-09-19 00:14:44,737 - INFO - Loading and processing dataset...
+2025-09-19 00:14:48,905 - INFO - Data loaded and processed successfully
+2025-09-19 00:14:48,905 - INFO - Loading models...
+2025-09-19 00:14:53,118 - INFO - gcc -pthread -B /mnt/petrelfs/fanyuyu/miniconda3/envs/vllm/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /mnt/petrelfs/fanyuyu/miniconda3/envs/vllm/include -fPIC -O2 -isystem /mnt/petrelfs/fanyuyu/miniconda3/envs/vllm/include -fPIC -c /tmp/tmp4j57l0fx/test.c -o /tmp/tmp4j57l0fx/test.o
+2025-09-19 00:14:53,237 - INFO - gcc -pthread -B /mnt/petrelfs/fanyuyu/miniconda3/envs/vllm/compiler_compat /tmp/tmp4j57l0fx/test.o -laio -o /tmp/tmp4j57l0fx/a.out
+2025-09-19 00:14:53,767 - INFO - gcc -pthread -B /mnt/petrelfs/fanyuyu/miniconda3/envs/vllm/compiler_compat -Wno-unused-result -Wsign-compare -DNDEBUG -fwrapv -O2 -Wall -fPIC -O2 -isystem /mnt/petrelfs/fanyuyu/miniconda3/envs/vllm/include -fPIC -O2 -isystem /mnt/petrelfs/fanyuyu/miniconda3/envs/vllm/include -fPIC -c /tmp/tmpm76c6xux/test.c -o /tmp/tmpm76c6xux/test.o
+2025-09-19 00:14:53,883 - INFO - gcc -pthread -B /mnt/petrelfs/fanyuyu/miniconda3/envs/vllm/compiler_compat /tmp/tmpm76c6xux/test.o -L/mnt/petrelfs/share/cuda-11.8 -L/mnt/petrelfs/share/cuda-11.8/lib64 -lcufile -o /tmp/tmpm76c6xux/a.out

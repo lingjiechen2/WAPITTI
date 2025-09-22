@@ -1,0 +1,7 @@
+2025-09-18 03:11:12,021 - INFO - Processing checkpoint-5000 with coefficient 3.9
+2025-09-18 03:11:12,022 - INFO - Output directory: /mnt/petrelfs/fanyuyu/fyy/WAPITI-Code-Base-master/results/watermark_vectors/Llama_2_7b_chat_hf_multi_lexsum/Llama_2_7b_hf_logit_watermark_distill_kgw_k2_gamma0.25_delta1/checkpoint_5000/coefficient_3.9
+2025-09-18 03:11:15,572 - INFO - Using device: cuda
+2025-09-18 03:11:15,628 - INFO - CUDA device count: 1
+2025-09-18 03:11:15,629 - INFO - Loading and processing dataset...
+2025-09-18 03:11:19,152 - INFO - Data loaded and processed successfully
+2025-09-18 03:11:19,152 - INFO - Loading models...
